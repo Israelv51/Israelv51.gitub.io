@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzería El Biker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css.css">
+
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="IMG/4.jfif" alt="Logo de la Pizzería" class="logo">
+            <h1>Pizzería El Biker</h1>
+            <p>¡Las mejores pizzas de la Chahuites!</p>
+            <div class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="menu.html">Menú</a>
+                <a href="contacto.html">Contacto</a>
+               
+            </div>
+        </nav>
+    </header>
+
+    <main class="contenido">
+        <aside class="anuncios">
+            <h2>Disfruta la experiencia</h2>
+            <video controls class="responsive-video">
+                <source src="IMG/anuncio1.mp4" type="video/mp4">
+            </video>
+            <img src="IMG/anuncio1.jpg" alt="Promoción 1">
+            <video controls class="responsive-video">
+                <source src="IMG/anuncio2.mp4" type="video/mp4">
+            </video>
+            <img src="IMG/anuncio2.jpg" alt="Promoción 2">
+        </aside>
+
+        <section class="principal">
+            <h3>Bienvenido a Pizzería El Biker</h3>
+            <p>Descubre nuestras deliciosas pizzas en distintos tamaños y sabores. ¡La mejor pizza de la ciudad está aquí!</p>
+
+            <!-- Orden de pizza -->
+            <div class="orden-pizza">
+                <h3>Ordena tu Pizza</h3>
+                <form onsubmit="ordenarPizza(event)">
+                    <label for="tamano">Selecciona el tamaño:</label>
+                    <select id="tamano" required>
+                        <option value="Pizza grande de 16 rebanadas ($299)">Pizza grande de 16 rebanadas ($299)</option>
+                        <option value="Pizza mediana redonda ($199)">Pizza mediana redonda ($199)</option>
+                        <option value="Pizza por rebanada ($20)">Pizza por rebanada ($20)</option>
+                    </select>
+
+                    <label for="especialidad">Elige la especialidad:</label>
+                    <select id="especialidad" required>
+                        <option value="Pepperoni">Pepperoni</option>
+                        <option value="Carnes Frías">Carnes Frías</option>
+                        <option value="Hawaiana">Hawaiana</option>
+                        <option value="Combinada">Combinada</option>
+                    </select>
+
+                    <button type="submit">Pagar vía WhatsApp</button>
+                </form>
+            </div>
+        </section>
+        <!-- Apartado de Cupones -->
+<div class="cupones">
+    <h3>Tienes un cupón? ¡Ingresa el código!</h3>
+    <form onsubmit="canjearCupon(event)">
+        <input type="text" id="codigoCupon" placeholder="Ingresa el código del cupón" required>
+        <button type="submit">Canjear Cupón</button>
+    </form>
+    <p id="mensajeCupon"></p>
+</div>
+
+       
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Pizzería El Biker | <a href="contacto.html">Contacto</a></p>
+        <p>Síguenos en:
+            <a href="#">Facebook</a> | 
+            <a href="https://www.instagram.com/axelisrael_vm?igsh=aTU5OThhMWE2ZjI=">Instagram</a> | 
+            <a href="#">Twitter</a>
+        </p>
+    </footer>
+
+    <script src="scrpts.js"></script>
+    
+   
+</body>
+</html>

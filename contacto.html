@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Pizzería El Biker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="IMG/4.jfif" alt="Logo de la Pizzería" class="logo">
+            <h1>Pizzería El Biker</h1>
+            <div class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="menu.html">Menú</a>
+               
+                <a href="contacto.html" class="active">Contacto</a>
+            
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contacto">
+            <div class="contact-header">
+                <h2>¡Contáctanos!</h2>
+                <p>Estamos aquí para resolver tus dudas y recibir tus sugerencias. ¡Tu satisfacción es nuestra prioridad!</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Información de Contacto</h3>
+                    <p><strong>WhatsApp:</strong> <a href="https://wa.me/6684631214">+6684631214</a></p>
+                    <p><strong>Teléfono:</strong> 668 464 1214</p>
+                    <p><strong>Dirección:</strong> Calle Falsa 123, Ciudad, País</p>
+                    <div class="publicidad">
+                        <h4>¡Promociones Exclusivas!</h4>
+                        <ul>
+                            <li><strong>Miércoles gran venta el el parque municipal:</strong> No te lo puedes perder!!!!</li>
+                            <li><strong>Jueves de Rebanadas Gratis:</strong> una rebanada en la compra de tres.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <form class="contact-form" onsubmit="enviarMensaje(event)">
+                    <h3>Envíanos un Mensaje</h3>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                    <button type="submit">Enviar a WhatsApp</button>
+                </form>
+            </div>
+
+            <div class="extra-content">
+                <h3>Experiencia Visual</h3>
+                <video controls class="promo-video">
+                    <source src="IMG/promo-video.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Pizzería El Biker - Todos los derechos reservados</p>
+            <div class="social-links">
+                <a href="https://facebook.com"><img src="IMG/face.jpg" alt="Facebook"></a>
+                <a href="https://www.instagram.com/axelisrael_vm?igsh=aTU5OThhMWE2ZjI="><img src="img/ig.jpg" alt="Instagram"></a>
+                <a href="https://twitter.com"><img src="img/tw.jpg" alt="Twitter"></a>
+            </div>
+            <div class="footer-links">
+                <a href="#">Política de Privacidad</a> | 
+                <a href="#">Términos de Servicio</a> | 
+                <a href="https://maps.google.com">Ubicación</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function enviarMensaje(event) {
+            event.preventDefault();
+            const nombre = document.getElementById('nombre').value;
+            const mensaje = document.getElementById('mensaje').value;
+            const url = `https://wa.me/6684631214?text=Hola, soy ${nombre}. ${mensaje}`;
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>

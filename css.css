@@ -1,0 +1,30 @@
+.cupones {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.cupones input {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.cupones button {
+    padding: 10px;
+    background-color: #FF6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cupones button:hover {
+    background-color: #ffc107;
+}
+
+#mensajeCupon {
+    margin-top: 10px;
+    font-weight: bold;
+    color: green;
+}
