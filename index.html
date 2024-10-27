@@ -6,7 +6,6 @@
     <title>Pizzería El Biker</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="css.css">
-
 </head>
 <body>
     <header>
@@ -18,7 +17,6 @@
                 <a href="index.html">Inicio</a>
                 <a href="menu.html">Menú</a>
                 <a href="contacto.html">Contacto</a>
-               
             </div>
         </nav>
     </header>
@@ -62,19 +60,19 @@
                     <button type="submit">Pagar vía WhatsApp</button>
                 </form>
             </div>
-        </section>
-        <!-- Apartado de Cupones -->
-<div class="cupones">
-    <h3>Tienes un cupón? ¡Ingresa el código!</h3>
-    <form onsubmit="canjearCupon(event)">
-        <input type="text" id="codigoCupon" placeholder="Ingresa el código del cupón" required>
-        <button type="submit">Canjear Cupón</button>
-    </form>
-    <p id="mensajeCupon"></p>
-</div>
 
-       
-        
+            <!-- Apartado de Cupones, movido aquí -->
+            <br>
+            <div class="cupones">
+                <h3>Tienes un cupón? ¡Ingresa el código!</h3>
+                <form onsubmit="canjearCupon(event)">
+                    <input type="text" id="codigoCupon" placeholder="Ingresa el código del cupón" required>
+                    <button type="submit">Canjear Cupón</button>
+                </form>
+                <p id="mensajeCupon"></p>
+            </div>
+        </section>
+
     </main>
 
     <footer>
@@ -87,7 +85,5 @@
     </footer>
 
     <script src="scrpts.js"></script>
-    
-   
 </body>
 </html>
