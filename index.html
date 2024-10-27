@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pizzería El Biker</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="css.css">
 </head>
 <body>
     <header>
@@ -42,26 +41,30 @@
             <div class="orden-pizza">
                 <h3>Ordena tu Pizza</h3>
                 <form onsubmit="ordenarPizza(event)">
-                    <label for="tamano">Selecciona el tamaño:</label>
-                    <select id="tamano" required>
-                        <option value="Pizza grande de 16 rebanadas ($299)">Pizza grande de 16 rebanadas ($299)</option>
-                        <option value="Pizza mediana redonda ($199)">Pizza mediana redonda ($199)</option>
-                        <option value="Pizza por rebanada ($20)">Pizza por rebanada ($20)</option>
-                    </select>
+                    <div class="form-group">
+                        <label for="tamano">Selecciona el tamaño:</label>
+                        <select id="tamano" required>
+                            <option value="Pizza grande de 16 rebanadas ($299)">Pizza grande de 16 rebanadas ($299)</option>
+                            <option value="Pizza mediana redonda ($199)">Pizza mediana redonda ($199)</option>
+                            <option value="Pizza por rebanada ($20)">Pizza por rebanada ($20)</option>
+                        </select>
+                    </div>
 
-                    <label for="especialidad">Elige la especialidad:</label>
-                    <select id="especialidad" required>
-                        <option value="Pepperoni">Pepperoni</option>
-                        <option value="Carnes Frías">Carnes Frías</option>
-                        <option value="Hawaiana">Hawaiana</option>
-                        <option value="Combinada">Combinada</option>
-                    </select>
+                    <div class="form-group">
+                        <label for="especialidad">Elige la especialidad:</label>
+                        <select id="especialidad" required>
+                            <option value="Pepperoni">Pepperoni</option>
+                            <option value="Carnes Frías">Carnes Frías</option>
+                            <option value="Hawaiana">Hawaiana</option>
+                            <option value="Combinada">Combinada</option>
+                        </select>
+                    </div>
 
                     <button type="submit">Pagar vía WhatsApp</button>
                 </form>
             </div>
 
-            <!-- Apartado de Cupones, movido aquí -->
+            <!-- Apartado de Cupones -->
             <br>
             <div class="cupones">
                 <h3>Tienes un cupón? ¡Ingresa el código!</h3>

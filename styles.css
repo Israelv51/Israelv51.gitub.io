@@ -7,22 +7,27 @@
 
 body {
     font-family: Arial, sans-serif;
-    color: #333;
-    background-image: url('IMG/fondo-general.jpg');
+    color: #f4f4f4;
+    background-image: url('IMG/dr.jpg');
     background-size: cover;
+    background-attachment: fixed;
+    transition: background-color 0.5s ease;
 }
 
+/* Barra de Navegación */
 header {
-    background-color: rgba(255, 99, 71, 0.9);
-    color: white;
+    background-color: rgba(0, 0, 0, 0.95);
+    color: #ffda3d;
     padding: 20px;
     text-align: center;
+    animation: fadeIn 1.5s ease;
 }
 
 .navbar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -30,47 +35,155 @@ header {
     margin-right: 10px;
 }
 
+/* Barra de Navegación */
+header {
+    background-color: rgba(0, 0, 0, 0.95);
+    color: #ffda3d;
+    padding: 20px;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
 .nav-links a {
-    color: white;
-    margin: 0 10px;
+    color: #ffda3d;
+    margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: color 0.3s, box-shadow 0.3s, transform 0.2s;
+    position: relative;
 }
 
-.nav-links a:hover {
-    color: #ffc107;
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.7), 0 0 20px rgba(255, 215, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s;
 }
 
-.contenido {
-    display: flex;
-    margin: 20px;
+.nav-links a:hover::after {
+    opacity: 1;
+}
+
+.nav-links a:active {
+    color: #ff6347;
+    box-shadow: none;
+    transform: scale(0.98);
+}
+
+
+/* Estilos de Anuncios */
+.anuncios h2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 10px;
 }
 
 .anuncios {
     width: 30%;
-    background-color: rgba(255, 193, 7, 0.9);
+    background-color: rgba(255, 193, 7, 0.85);
     padding: 20px;
     border-radius: 10px;
     text-align: center;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
+.anuncios img, .anuncios video {
+    width: 100%;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+/* Principal */
 .principal {
     width: 65%;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #ffda3d;
     padding: 20px;
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-footer {
-    background-color: rgba(255, 99, 71, 0.9);
+.principal h3 {
+    color: #ffda3d;
+    font-size: 26px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+/* Orden de Pizza */
+.orden-pizza {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    color: #ffda3d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* Botones mejorados */
+button {
+    background-color: #ff6347;
     color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #ffda3d;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #ffda3d;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
+    font-size: 14px;
 }
 
 footer a {
-    color: #ffc107;
+    color: #ff6347;
     text-decoration: none;
 }
 
@@ -78,46 +191,77 @@ footer a:hover {
     text-decoration: underline;
 }
 
-.responsive-video {
-    width: 100%;
-    height: auto;
-    margin: 15px 0;
+/* Halloween Animations */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('IMG/dragon-halloween.gif'), url('IMG/moto-halloween.gif');
+    background-position: left bottom, right top;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    animation: moveDragons 10s infinite linear, floatGhosts 8s infinite alternate ease-in-out;
+    opacity: 0.7;
 }
-.orden-pizza {
-    background-color: rgba(255, 255, 255, 0.8);
+
+@keyframes moveDragons {
+    0% {
+        background-position: left -200px, right 0px;
+    }
+    100% {
+        background-position: left 100vw, right 100vw;
+    }
+}
+
+@keyframes floatGhosts {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(15px);
+    }
+}
+
+/* Responsivo para Móviles */
+@media (max-width: 768px) {
+    .contenido {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .anuncios, .principal {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/* Contenedor Principal */
+.contenido {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     padding: 20px;
-    margin-top: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.orden-pizza h3 {
-    color: #333;
-}
-
-.orden-pizza label {
-    display: block;
-    margin: 10px 0 5px;
-    font-weight: bold;
-}
-
-.orden-pizza select, .orden-pizza button {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.orden-pizza button {
-    background-color: #ff6347;
-    color: white;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
-
-.orden-pizza button:hover {
-    background-color: #e55340;
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    .contenido {
+        flex-direction: column;
+        align-items: center;
+    }
+    .anuncios, .principal {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
 }
